@@ -1,0 +1,17 @@
+.labelName{
+    color: white;
+    float: left;
+}
+
+.labelAbilities{
+    color: black;
+    float: left;
+}
+
+.listItem{
+    float: left;
+}
+
+.btn_right_align{
+    float: right;
+}
