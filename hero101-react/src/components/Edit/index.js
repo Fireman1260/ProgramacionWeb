@@ -26,7 +26,7 @@ class Edit  extends Component{
     componentDidMount(){
         const values = queryString.parse(this.props.location.search)
         
-        var url = "http://localhost:3001/api/heroes/" + values.id
+        var url = "http://40.117.99.231:3001/api/heroes/" + values.id
         
         fetch(url)
         .then(res => res.json())
@@ -63,7 +63,7 @@ class Edit  extends Component{
             src: src
             }
 
-            var url = "http://localhost:3001/api/heroes/" + id;
+            var url = "http://40.117.99.231:3001/api/heroes/" + id;
             fetch(url, {
                 method: 'PUT', // or 'PUT'
                 body: JSON.stringify(newHero), // data can be `string` or {object}!
@@ -71,8 +71,10 @@ class Edit  extends Component{
                   'Content-Type': 'application/json'
                 }
               }).then(response => console.log('Success:', response));
-        
-         window.location.href = "/"
+              
+              setTimeout(function(){
+                window.location.href = "/"
+            }, 2000);
     }
 
 

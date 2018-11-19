@@ -21,7 +21,8 @@ class Home  extends Component{
     }
 
     componentDidMount() {
-        var url = "http://localhost:3001/api/heroes"
+        // var url = "http://localhost:3001/api/heroes"
+        var url = "http://40.117.99.231:3001/api/heroes"
         fetch(url)
         .then(res => res.json())
         .then(json => {

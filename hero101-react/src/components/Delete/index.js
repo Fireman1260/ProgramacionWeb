@@ -17,7 +17,7 @@ class Delete  extends Component{
 
     componentDidMount(){
         const values = queryString.parse(this.props.location.search)
-        var url = "http://localhost:3001/api/heroes/" + values.id
+        var url = "http://40.117.99.231:3001/api/heroes/" + values.id
         
         fetch(url)
         .then(res => res.json())
@@ -39,12 +39,14 @@ class Delete  extends Component{
     }
 
     killHero(id){
-        var url = "http://localhost:3001/api/heroes/" + id
+        var url = "http://40.117.99.231:3001/api/heroes/" + id
         
         fetch(url, {method: 'delete'})
         .then(res => res.json())
-
-         window.location.href = "/"
+        
+        setTimeout(function(){
+            window.location.href = "/"
+        }, 2000);
     }
 
     render(){

@@ -3,7 +3,7 @@ const mongo = require('mongodb').MongoClient;
 const app = express()
 var assert = require('assert')
 
-var url = 'mongodb://mongo:27017'
+var url = 'mongodb://40.114.73.18:27017'
 
 app.use(express.json())
 app.use(function(req, res, next) {

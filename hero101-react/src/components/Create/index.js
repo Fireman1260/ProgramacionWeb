@@ -29,7 +29,7 @@ class Create extends Component{
                         }
         
 
-        var url = "http://localhost:3001/api/heroes"
+        var url = "http://40.117.99.231:3001/api/heroes"
 
         fetch(url, {
             method: 'POST', // or 'PUT'
@@ -38,8 +38,12 @@ class Create extends Component{
               'Content-Type': 'application/json'
             }
           }).then(res => res.json())
-          .then(response => console.log('Success:', response));
-       window.location.href = "/"
+          .then(response => console.log('Success:', response))
+
+          setTimeout(function(){
+            window.location.href = "/"
+        }, 2000);
+      
     }
 
 
